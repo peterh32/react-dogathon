@@ -7,6 +7,6 @@ export default class Dog extends React.Component {
   }
 
   render() {
-    return <div onClick={this.bark}><h2>Dog</h2></div>
+    return <div onClick={this.bark}><h2>Woof</h2></div>
   }
 }

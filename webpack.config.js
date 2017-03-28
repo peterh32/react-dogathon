@@ -1,14 +1,13 @@
 var path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, 'src'),
-  entry: './index.jsx',
+  context: path.join(__dirname, 'demo'),
+  entry: ['./app.jsx'],
   output: {
-    path: path.join(__dirname, 'lib'),
-    filename: 'bundle.js',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    path: path.join(__dirname, 'public'),
+    filename: 'app.js'
   },
+
   module: {
     rules: [
       {
@@ -18,10 +17,18 @@ module.exports = {
       }
     ]
   },
+
   resolve: {
     extensions: ['.jsx', '.js'],
     modules: [
       path.join(__dirname, 'node_modules')
     ]
+  },
+
+  // CLI:  webpack-dev-server --hot --inline
+  devServer: {
+    contentBase: path.join(__dirname, "public"),
+    port: 8080,
+    watchContentBase: true
   }
 };

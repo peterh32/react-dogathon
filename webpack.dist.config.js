@@ -1,11 +1,13 @@
 var path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, 'demo'),
-  entry: ['./app.jsx'],
+  context: path.join(__dirname, 'src'),
+  entry: './index.jsx',
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'app.js'
+    path: path.join(__dirname, 'lib'),
+    filename: 'bundle.js',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [

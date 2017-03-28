@@ -1,14 +1,12 @@
 {
   "name": "react-dogathon",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is nothing",
   "main": "lib/bundle.js",
   "scripts": {
-    "build": "webpack",
-    "build-demo": "webpack --config webpack.demo.config.js -d",
-    "launch": "http-server -a localhost -p 8888 -c-1 -o",
-    "server": "http-server -a localhost -p 8888 -c-1",
-    "start": "npm run build; npm run build-demo; npm run server",
+    "build": "webpack --config webpack.dist.config.js",
+    "build-demo": "webpack -d",
+    "start": "webpack-dev-server --hot --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,7 +29,8 @@
     "babel-preset-latest": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "http-server": "^0.9.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "react": "^15.4.2",
