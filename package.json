@@ -1,12 +1,13 @@
 {
   "name": "react-dogathon",
-  "version": "0.0.4",
+  "version": "0.0.12",
   "description": "This is nothing",
   "main": "lib/bundle.js",
   "scripts": {
-    "build": "webpack --config webpack.dist.config.js",
-    "build-demo": "webpack -d",
+    "prepublish": "webpack --config webpack.dist.config.js",
+    "build": "webpack -d",
     "start": "webpack-dev-server --hot --inline",
+    "launch": "webpack-dev-server --hot --inline --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +29,11 @@
     "babel-loader": "^6.4.1",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
     "http-server": "^0.9.0",
+    "node-sass": "^4.5.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   },

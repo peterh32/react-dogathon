@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Dog.scss'
 
 export default class Dog extends React.Component {
   bark() {
@@ -7,6 +7,6 @@ export default class Dog extends React.Component {
   }
 
   render() {
-    return <div onClick={this.bark}><h2>Woof</h2></div>
+    return <div className="dog_component" onClick={this.bark}><h2>Woof</h2></div>
   }
 }
