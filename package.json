@@ -6,6 +6,7 @@
   "scripts": {
     "prepublish": "webpack --config webpack.dist.config.js -p",
     "build": "webpack -d",
+    "push": "npm run build; git push; git subtree push --prefix public origin gh-pages",
     "start": "webpack-dev-server --hot --inline",
     "launch": "webpack-dev-server --hot --inline --open",
     "test": "echo \"Error: no test specified\" && exit 1"
